@@ -3,6 +3,7 @@ package kata;
 import inheritance.BestValueMenu;
 import inheritance.GourmetsMenu;
 import inheritance.MeatLoversMenu;
+import inheritance.Waiter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +14,7 @@ public class MenuTest {
     @Test
     void bestValueMenu() throws Exception {
         BestValueMenu bestValueMenu = new BestValueMenu();
-        String result = serveMenu(bestValueMenu);
+        String result = Waiter.serveMenu(bestValueMenu);
         Assertions.assertEquals("sallad\n" +
                 "quiche lorraine\n" +
                 "brownie", result);
@@ -23,7 +24,7 @@ public class MenuTest {
     @Test
     void GourmetsMenu() throws Exception {
         GourmetsMenu gourmetsMenu = new GourmetsMenu();
-        String result = serveMenu(gourmetsMenu);
+        String result = Waiter.serveMenu(gourmetsMenu);
         Assertions.assertEquals("sallad\n" +
                 "quiche lorraine\n" +
                 "crème caramel", result);
@@ -32,16 +33,11 @@ public class MenuTest {
     @Test
     void meatLoversMenu() throws Exception {
         MeatLoversMenu meatLoversMenu = new MeatLoversMenu();
-        String result = serveMenu(meatLoversMenu);
+        String result = Waiter.serveMenu(meatLoversMenu);
         Assertions.assertEquals("sallad\n" +
                 "filet mignon\n" +
                 "brownie", result);
 
     }
 
-    private String serveMenu(BestValueMenu bestValueMenu) {
-        return bestValueMenu.starter() + "\n" +
-                bestValueMenu.mainCourse() +  "\n" +
-                bestValueMenu.dessert();
-    }
 }
