@@ -4,18 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
         BestValueMenu bestValueMenu = new BestValueMenu();
-        printMenu(bestValueMenu);
+        printMenu(bestValueMenu, "best value");
         BestValueMenu meatLoversMenu = new MeatLoversMenu();
-        printMenu(meatLoversMenu);
+        printMenu(meatLoversMenu, "meat lovers");
         BestValueMenu gourmetMenu = new GourmetsMenu();
-        printMenu(gourmetMenu);
+        printMenu(gourmetMenu, "gourmet");
     }
 
-    private static void printMenu(BestValueMenu bestValueMenu) {
-        System.out.println("serving menu: " + bestValueMenu.getClass().getSimpleName());
-        System.out.println(bestValueMenu.starter());
-        System.out.println(bestValueMenu.mainCourse());
-        System.out.println(bestValueMenu.dessert());
+    private static void printMenu(BestValueMenu bestValueMenu, String menuName) {
+        System.out.println("serving "+ menuName + " menu:");
+        System.out.println(Waiter.serveMenu(bestValueMenu));
         System.out.println();
     }
 }
