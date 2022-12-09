@@ -22,9 +22,7 @@ public class Main {
 
     private static void printMenu(Menu menu) {
         System.out.println("serving menu: " + menu.getClass().getSimpleName());
-        System.out.println(menu.starter());
-        System.out.println(menu.mainCourse());
-        System.out.println(menu.dessert());
+        System.out.println(Waiter.serveMenu(menu));
         System.out.println();
     }
 }
