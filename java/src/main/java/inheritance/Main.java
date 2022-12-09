@@ -3,11 +3,11 @@ package inheritance;
 public class Main {
 
     public static void main(String[] args) {
-        BestValueMenu bestValueMenu = new BestValueMenu();
+        var bestValueMenu = new BestValueMenu();
         printMenu(bestValueMenu, "best value");
-        BestValueMenu meatLoversMenu = new MeatLoversMenu();
+        var meatLoversMenu = new MeatLoversMenu();
         printMenu(meatLoversMenu, "meat lovers");
-        BestValueMenu gourmetMenu = new GourmetsMenu();
+        var gourmetMenu = new GourmetsMenu();
         printMenu(gourmetMenu, "gourmet");
     }
 

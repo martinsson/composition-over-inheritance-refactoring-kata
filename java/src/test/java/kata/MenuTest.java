@@ -7,13 +7,11 @@ import inheritance.Waiter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class MenuTest {
 
     @Test
     void bestValueMenu() throws Exception {
-        BestValueMenu bestValueMenu = new BestValueMenu();
+        var bestValueMenu = new BestValueMenu();
         String result = Waiter.serveMenu(bestValueMenu);
         Assertions.assertEquals("sallad\n" +
                 "quiche lorraine\n" +
@@ -23,7 +21,7 @@ public class MenuTest {
 
     @Test
     void GourmetsMenu() throws Exception {
-        GourmetsMenu gourmetsMenu = new GourmetsMenu();
+        var gourmetsMenu = new GourmetsMenu();
         String result = Waiter.serveMenu(gourmetsMenu);
         Assertions.assertEquals("sallad\n" +
                 "quiche lorraine\n" +
@@ -32,7 +30,7 @@ public class MenuTest {
 
     @Test
     void meatLoversMenu() throws Exception {
-        MeatLoversMenu meatLoversMenu = new MeatLoversMenu();
+        var meatLoversMenu = new MeatLoversMenu();
         String result = Waiter.serveMenu(meatLoversMenu);
         Assertions.assertEquals("sallad\n" +
                 "filet mignon\n" +
