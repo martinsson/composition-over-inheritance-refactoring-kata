@@ -1,26 +1,28 @@
 @startuml
 
 class inheritance.BestValueMenu {
-	{method} +dessert () : String
-	{method} +mainCourse () : String
-	{method} +starter () : String
+	{method} #dessert () : String
+	{method} #logAllergens ( paramString1 : String , paramString2 : String ) : void
+	{method} #mainCourse () : String
+	{method} +serveMenu ( paramBestValueMenu1 : inheritance.BestValueMenu ) : String
+	{method} -starter () : String
 }
 
 
 class inheritance.GourmetsMenu {
-	{method} +dessert () : String
+	{method} #dessert () : String
 }
 
 
 class inheritance.MeatLoversMenu {
-	{method} +mainCourse () : String
+	{method} #mainCourse () : String
 }
 
 
 
 
-inheritance.BestValueMenu <|-- inheritance.GourmetsMenu
-inheritance.BestValueMenu <|-- inheritance.MeatLoversMenu
+inheritance.GourmetsMenu --|>  inheritance.BestValueMenu
+inheritance.MeatLoversMenu --|>  inheritance.BestValueMenu
 
 
 @enduml

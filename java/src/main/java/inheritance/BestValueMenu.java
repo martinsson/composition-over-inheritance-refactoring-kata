@@ -14,10 +14,16 @@ public class BestValueMenu {
     }
 
     protected String mainCourse() {
+        allergenNotification("quiche lorraine", "milk");
         return "quiche lorraine";
     }
 
     protected String dessert() {
+        allergenNotification("brownie", "nuts");
         return "brownie";
+    }
+
+    protected void allergenNotification(String plate, String allergenType) {
+        System.out.println("[Allergen]: " + plate + " contains " + allergenType);
     }
 }
