@@ -1,7 +1,15 @@
 package inheritance;
 
+import java.io.PrintStream;
+
 public class BestValueMenu {
 
+
+    private final PrintStream out;
+
+    public BestValueMenu(PrintStream out) {
+        this.out = out;
+    }
 
     public String serveMenu() {
         return this.starter() + "\n" +
@@ -24,6 +32,6 @@ public class BestValueMenu {
     }
 
     protected void allergenNotification(String plate, String allergenType) {
-        System.out.println("[Allergen]: " + plate + " contains " + allergenType);
+        out.println("[Allergen]: " + plate + " contains " + allergenType);
     }
 }
