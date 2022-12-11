@@ -1,4 +1,9 @@
 export class BestValueMenu {
+    private notifier;
+    constructor(notifier: any) {
+        this.notifier = notifier;
+    }
+
 
     serveMenu(): string {
         return "sallad" + "\n"
@@ -7,10 +12,16 @@ export class BestValueMenu {
     }
 
     protected mainCourse() {
+        this.allergenNotificiation("quiche lorraine", "milk")
         return "quiche lorraine";
     }
 
     protected dessert() {
+        this.allergenNotificiation("brownie", "nuts")
         return "brownie";
+    }
+
+    protected allergenNotificiation(plate: string, allergen: string) {
+        this.notifier.log(`[Allergen]: ${plate} contains ${allergen}` )
     }
 }
