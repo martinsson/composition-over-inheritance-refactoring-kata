@@ -3,7 +3,7 @@ package inheritance;
 
 public class GourmetsMenu extends BestValueMenu {
     @Override
-    public String dessert() {
+    protected String dessert() {
         return "crème caramel";
     }
 }

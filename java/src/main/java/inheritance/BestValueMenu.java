@@ -3,15 +3,21 @@ package inheritance;
 public class BestValueMenu {
 
 
-    public String starter() {
+    public String serveMenu(BestValueMenu bestValueMenu) {
+        return bestValueMenu.starter() + "\n" +
+                bestValueMenu.mainCourse() + "\n" +
+                bestValueMenu.dessert();
+    }
+
+    private String starter() {
         return "sallad";
     }
 
-    public String mainCourse() {
+    protected String mainCourse() {
         return "quiche lorraine";
     }
 
-    public String dessert() {
+    protected String dessert() {
         return "brownie";
     }
 }

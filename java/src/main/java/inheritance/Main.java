@@ -13,7 +13,7 @@ public class Main {
 
     private static void printMenu(BestValueMenu bestValueMenu, String menuName) {
         System.out.println("serving "+ menuName + " menu:");
-        System.out.println(Waiter.serveMenu(bestValueMenu));
+        System.out.println(bestValueMenu.serveMenu(bestValueMenu));
         System.out.println();
     }
 }
