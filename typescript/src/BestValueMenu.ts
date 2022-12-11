@@ -1,14 +1,20 @@
+import {Notifier} from "./Notifier";
+
 export class BestValueMenu {
     private notifier;
-    constructor(notifier: any) {
+    constructor(notifier: Notifier) {
         this.notifier = notifier;
     }
 
 
     serveMenu(): string {
-        return "sallad" + "\n"
+        return this.starter() + "\n"
         + this.mainCourse() + "\n"
         + this.dessert()
+    }
+
+    private starter() {
+        return "sallad";
     }
 
     protected mainCourse() {
