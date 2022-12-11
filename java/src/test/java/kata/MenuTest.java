@@ -11,7 +11,7 @@ public class MenuTest {
     @Test
     void bestValueMenu() throws Exception {
         var bestValueMenu = new BestValueMenu();
-        String result = bestValueMenu.serveMenu(bestValueMenu);
+        String result = bestValueMenu.serveMenu();
         Assertions.assertEquals("sallad\n" +
                 "quiche lorraine\n" +
                 "brownie", result);
@@ -21,7 +21,7 @@ public class MenuTest {
     @Test
     void GourmetsMenu() throws Exception {
         var gourmetsMenu = new GourmetsMenu();
-        String result = gourmetsMenu.serveMenu(gourmetsMenu);
+        String result = gourmetsMenu.serveMenu();
         Assertions.assertEquals("sallad\n" +
                 "quiche lorraine\n" +
                 "crème caramel", result);
@@ -30,7 +30,7 @@ public class MenuTest {
     @Test
     void meatLoversMenu() throws Exception {
         var meatLoversMenu = new MeatLoversMenu();
-        String result = meatLoversMenu.serveMenu(meatLoversMenu);
+        String result = meatLoversMenu.serveMenu();
         Assertions.assertEquals("sallad\n" +
                 "filet mignon\n" +
                 "brownie", result);

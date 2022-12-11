@@ -3,10 +3,10 @@ package inheritance;
 public class BestValueMenu {
 
 
-    public String serveMenu(BestValueMenu bestValueMenu) {
-        return bestValueMenu.starter() + "\n" +
-                bestValueMenu.mainCourse() + "\n" +
-                bestValueMenu.dessert();
+    public String serveMenu() {
+        return this.starter() + "\n" +
+                this.mainCourse() + "\n" +
+                this.dessert();
     }
 
     private String starter() {
