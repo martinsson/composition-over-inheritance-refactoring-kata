@@ -1,0 +1,26 @@
+@startuml
+
+class inheritance.BestValueMenu {
+	{method} +dessert () : String
+	{method} +mainCourse () : String
+	{method} +starter () : String
+}
+
+
+class inheritance.GourmetsMenu {
+	{method} +dessert () : String
+}
+
+
+class inheritance.MeatLoversMenu {
+	{method} +mainCourse () : String
+}
+
+
+
+
+inheritance.BestValueMenu <|-- inheritance.GourmetsMenu
+inheritance.BestValueMenu <|-- inheritance.MeatLoversMenu
+
+
+@enduml

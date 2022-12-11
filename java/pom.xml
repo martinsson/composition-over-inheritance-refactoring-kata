@@ -27,12 +27,18 @@
         </dependency>
 
         <dependency>
-          <groupId>org.assertj</groupId>
-          <artifactId>assertj-core</artifactId>
-          <version>3.13.2</version>
-           <scope>test</scope>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.13.2</version>
+            <scope>test</scope>
         </dependency>
-        
+
+        <dependency>
+            <groupId>de.elnarion.util</groupId>
+            <artifactId>plantuml-generator-util</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
