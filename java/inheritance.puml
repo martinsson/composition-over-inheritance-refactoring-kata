@@ -1,10 +1,11 @@
 @startuml
 
 class inheritance.BestValueMenu {
+	{field} -out : java.io.PrintStream
+	{method} #allergenNotification ( paramString1 : String , paramString2 : String ) : void
 	{method} #dessert () : String
-	{method} #logAllergens ( paramString1 : String , paramString2 : String ) : void
 	{method} #mainCourse () : String
-	{method} +serveMenu ( paramBestValueMenu1 : inheritance.BestValueMenu ) : String
+	{method} +serveMenu () : String
 	{method} -starter () : String
 }
 
