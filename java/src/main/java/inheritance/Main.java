@@ -9,16 +9,16 @@ public class Main {
 
     public static void main(String[] args) {
         final var allergenNotifier = new AllergenNotifier();
-        var brownie = new Brownie(allergenNotifier);
-        var quicheLorraine = new QuicheLorraine(allergenNotifier);
-        var cremeCaramel = new CremeCaramel(allergenNotifier);
+        var brownie = new Brownie();
+        var quicheLorraine = new QuicheLorraine();
+        var cremeCaramel = new CremeCaramel();
         var filetMignon = new FiletMignon();
 
-        var bestValueMenu = new BestValueMenu(brownie, quicheLorraine);
+        var bestValueMenu = new BestValueMenu(brownie, quicheLorraine, allergenNotifier);
         printMenu(bestValueMenu, "best value");
-        var meatLoversMenu = new BestValueMenu(brownie, filetMignon);
+        var meatLoversMenu = new BestValueMenu(brownie, filetMignon, allergenNotifier);
         printMenu(meatLoversMenu, "meat lovers");
-        var gourmetMenu = new BestValueMenu(cremeCaramel, quicheLorraine);
+        var gourmetMenu = new BestValueMenu(cremeCaramel, quicheLorraine, allergenNotifier);
         printMenu(gourmetMenu, "gourmet");
     }
 

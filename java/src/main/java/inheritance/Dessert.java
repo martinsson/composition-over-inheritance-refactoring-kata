@@ -1,5 +1,7 @@
 package inheritance;
 
-public interface Dessert {
+import java.util.List;
+
+public interface Dessert extends Dish {
     String dessert();
 }

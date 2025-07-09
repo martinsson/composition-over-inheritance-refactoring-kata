@@ -1,5 +1,5 @@
 package inheritance;
 
-public interface MainCourse {
+public interface MainCourse extends Dish {
     String mainCourse();
 }

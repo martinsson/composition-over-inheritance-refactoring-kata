@@ -1,19 +1,18 @@
 package inheritance.dessert;
 
-import inheritance.AllergenNotifier;
 import inheritance.Dessert;
+
+import java.util.List;
 
 public class CremeCaramel implements Dessert {
 
-    private final AllergenNotifier allergenNotifier;
-
-    public CremeCaramel(AllergenNotifier allergenNotifier) {
-        this.allergenNotifier = allergenNotifier;
+    @Override
+    public String dessert() {
+        return "crème caramel";
     }
 
     @Override
-    public String dessert() {
-        allergenNotifier.allergenNotification("crème caramel", "milk");
-        return "crème caramel";
+    public List<String> allergens() {
+        return List.of("milk");
     }
 }

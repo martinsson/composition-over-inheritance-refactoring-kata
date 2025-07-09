@@ -1,19 +1,18 @@
 package inheritance.mainCourse;
 
-import inheritance.AllergenNotifier;
 import inheritance.MainCourse;
+
+import java.util.List;
 
 public class QuicheLorraine implements MainCourse {
 
-    private final AllergenNotifier allergenNotifier;
-
-    public QuicheLorraine(AllergenNotifier allergenNotifier) {
-        this.allergenNotifier = allergenNotifier;
+    @Override
+    public String mainCourse() {
+        return "quiche lorraine";
     }
 
     @Override
-    public String mainCourse() {
-        allergenNotifier.allergenNotification("quiche lorraine", "milk");
-        return "quiche lorraine";
+    public List<String> allergens() {
+        return List.of("milk");
     }
 }
