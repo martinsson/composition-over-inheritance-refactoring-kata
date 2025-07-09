@@ -12,8 +12,8 @@ public class BestValueMenu {
     }
 
     public String serveMenu() {
-        return this.starter() + "\n" +
-                this.mainCourse() + "\n" +
+        return this.starter() + System.lineSeparator() +
+                this.mainCourse() + System.lineSeparator() +
                 this.dessert();
     }
 
