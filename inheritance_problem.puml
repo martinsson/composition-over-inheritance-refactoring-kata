@@ -1,0 +1,29 @@
+
+@startuml
+
+
+class AbstractRegistration {
+    {method} +register ( username , userInfo ) : void
+    {method} #addNotificationHandle ( parameters ) : void
+}
+
+class EmailRegistration  extends AbstractRegistration {
+    {method} #addNotificationHandle ( parameters ) : void
+}
+
+class PhoneRegistration  extends AbstractRegistration {
+    {method} #addNotificationHandle ( parameters ) : void
+}
+
+
+class EmailAndPhoneRegistration extends PhoneRegistration, EmailRegistration {
+    {method} #addNotificationHandle ( parameters  ) : void
+}
+
+note bottom of  EmailAndPhoneRegistration
+    This class is a problem because it inherits from two classes that have the same method.
+    Besides multiple inheritance is usually not possible at all
+end note
+
+
+@enduml

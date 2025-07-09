@@ -18,6 +18,7 @@ public class PlantUML {
         List<String> scanpackages = new ArrayList<>();
         scanpackages.add(packageName);
         List<String> hideClasses = new ArrayList<>();
+        hideClasses.add(packageName + ".AllergenNotifier");
         PlantUMLClassDiagramGenerator generator =
                 new PlantUMLClassDiagramGenerator(PlantUML.class.getClassLoader(),
                         scanpackages, packageName + "\\.(Main|Waiter)", hideClasses, false, false);
