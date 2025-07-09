@@ -14,6 +14,7 @@ public class MenuTest {
 
     private ByteArrayOutputStream out;
     private PrintStream printStream;
+    private String newLine = System.lineSeparator();
 
     @BeforeEach
     void setUp() {
@@ -25,11 +26,11 @@ public class MenuTest {
     void bestValueMenu() throws Exception {
         var bestValueMenu = new BestValueMenu(printStream);
         String result = bestValueMenu.serveMenu();
-        Assertions.assertEquals("sallad\n" +
-                "quiche lorraine\n" +
+        Assertions.assertEquals("sallad" + newLine +
+                "quiche lorraine" + newLine +
                 "brownie", result);
-        Assertions.assertEquals("[Allergen]: quiche lorraine contains milk\n" +
-                "[Allergen]: brownie contains nuts\n", out.toString());
+        Assertions.assertEquals("[Allergen]: quiche lorraine contains milk" + newLine +
+                "[Allergen]: brownie contains nuts" + newLine, out.toString());
 
     }
 
@@ -37,11 +38,11 @@ public class MenuTest {
     void GourmetsMenu() throws Exception {
         var gourmetsMenu = new GourmetsMenu(printStream);
         String result = gourmetsMenu.serveMenu();
-        Assertions.assertEquals("sallad\n" +
-                "quiche lorraine\n" +
+        Assertions.assertEquals("sallad" + newLine +
+                "quiche lorraine" + newLine +
                 "crème caramel", result);
-        Assertions.assertEquals("[Allergen]: quiche lorraine contains milk\n" +
-                "[Allergen]: crème caramel contains milk\n", out.toString());
+        Assertions.assertEquals("[Allergen]: quiche lorraine contains milk" + newLine +
+                "[Allergen]: crème caramel contains milk" + newLine, out.toString());
 
     }
 
@@ -49,10 +50,10 @@ public class MenuTest {
     void meatLoversMenu() throws Exception {
         var meatLoversMenu = new MeatLoversMenu(printStream);
         String result = meatLoversMenu.serveMenu();
-        Assertions.assertEquals("sallad\n" +
-                "filet mignon\n" +
+        Assertions.assertEquals("sallad" + newLine +
+                "filet mignon" + newLine +
                 "brownie", result);
-        Assertions.assertEquals("[Allergen]: brownie contains nuts\n", out.toString());
+        Assertions.assertEquals("[Allergen]: brownie contains nuts" + newLine, out.toString());
 
 
     }
